@@ -43,19 +43,23 @@ function hitbox(){
     score.textContent++;
   }
 
-  if((posXBombe <= 50 && posXBombe >= 0) 
+  if((posXBombe <= 35) 
   && positionYMario <= positionTopBombe){
     mario.style['display'] = "none";
     bombe.style['display'] = "none";
     bombe.style['animation'] = "";
-    alert(`Vous avez perdu !\nScore : ${score.textContent} pts !`);
-    clearInterval(randomPosition);
-    setTimeout(() => {
-      mario.style['display'] = "inline";
-      bombe.style['display'] = "inline";
-    }, 1000);
+    score = score.textContent;
+    score = score - 1;
+    alert(`Vous avez perdu !\nScore : ${score} pts !`);
     score = 0;
-    intervalPositionBombe = setInterval(randomPosition, 1000);
+    window.location.reload();
+    // clearInterval(randomPosition);
+    // setTimeout(() => {
+    //   mario.style['display'] = "inline";
+    //   bombe.style['display'] = "inline";
+    // }, 1000);
+    // score = 0;
+    // intervalPositionBombe = setInterval(randomPosition, 1000);
   }
 
 }
