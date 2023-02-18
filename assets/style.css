@@ -1,0 +1,69 @@
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#canva{
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+#canva #mario{
+  width: 25px;
+  position: absolute;
+  bottom: 0;
+}
+
+#canva #bombe{
+  width: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation: fire 1s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%{
+    bottom: 0;
+  }
+  45%{
+    bottom: 90px;
+  }
+  55%{
+    bottom: 90px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+@keyframes fire {
+  0%{
+    right: 0px;
+  }
+  100%{
+    right: 600px;
+  }
+}
