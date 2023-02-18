@@ -43,6 +43,7 @@ body{
   right: 0;
   bottom: 0;
   animation: fire 1s ease-in-out infinite;
+  transition: .3s all ease;
 }
 
 @keyframes jump {

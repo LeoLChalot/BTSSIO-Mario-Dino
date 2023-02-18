@@ -2,7 +2,7 @@ let canva = document.getElementById("canva");
 let mario = document.getElementById("mario");
 let bombe = document.getElementById("bombe");
 let positionYBombe;
-let intervalPositionBombe = setInterval(randomPosition, 1000);
+let intervalPositionBombe = setInterval(randomPosition, 200);
 let score = document.getElementById("score");
 score.textContent = 0;
 let hitValues = setInterval(hitbox, 5);
